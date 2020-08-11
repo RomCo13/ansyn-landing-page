@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, RouterStateSnapshot } from '@angular/router';
 
 @Component({
   selector: 'app-images',
@@ -6,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./images.component.less']
 })
 export class ImagesComponent implements OnInit {
+  constructor(private router:Router){
+
+  }
 
   images: any[] = ["../../assets/pics/1.jpg","../../assets/pics/2.jpg","../../assets/pics/3.jpg"];
   currentImage: number = 0;
@@ -48,7 +52,15 @@ export class ImagesComponent implements OnInit {
     }
   }
 
+  navHome()
+  {
+    this.router.navigate(["/home"])
+  }
+  navToColumbus()
+  {
+    window.location.href="http://platform.ansyn.io:81/#/";
+  }
   ngOnInit(): void {
-    
+
   }
 }

@@ -2,7 +2,7 @@
   <div class="wrapper">
     <h1>קולומבוס</h1>
     <span class="message">הפנים של העולם החזותי, לכל אחד ומכל מקום</span>
-    <button mat-flat-button color="primary" class="link">
+    <button mat-flat-button color="primary" class="link" (click)="navigateToColumbus()">
         עבור לקולמבוס
     </button>
   </div>
@@ -21,7 +21,7 @@
         </div>
         <hr>
         <div class="buttons-aria">
-          <button mat-raised-button>
+          <button mat-raised-button (click)="navigateToShortVideo()">
             <mat-icon>
               play_circle_outline
             </mat-icon>
@@ -31,7 +31,6 @@
               <br>
               (2:30 דקות)
             </span>
-
           </button>
 
           <button mat-raised-button>
@@ -69,7 +68,7 @@
 
         <button mat-raised-button>
           <mat-icon>
-            miscellaneous_services
+            build
           </mat-icon>
           <span>
             <br>

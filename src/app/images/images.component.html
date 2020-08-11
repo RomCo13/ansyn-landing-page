@@ -1,9 +1,20 @@
+<div *ngIf="isLastPicture()">
+  <p >
+        <img id="logo" src="..\..\assets\logo.svg" (click)="navToColumbus()">
+  </p>
+  <p>
+    <button id="home" mat-raised-button (click)="navHome()">
+      <mat-icon>
+        home
+      </mat-icon>
+      <span>
+        <br>
+        home page
+      </span>
+    </button>
+  </p>
+</div>
 
-<p *ngIf="isLastPicture()">
-    <a href="http://platform.ansyn.io:81/#/">
-        <img id="logo" src="..\..\assets\logo.svg">
-    </a>
-</p>
 <img id="presentation" src={{images[currentImage]}}>
 <div *ngIf="!isLastPicture()" class="left" (click)="nextImage()">
     <img src="../../assets/pics/back.png">

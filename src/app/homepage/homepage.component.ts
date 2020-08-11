@@ -17,4 +17,11 @@ export class HomepageComponent implements OnInit {
   {
     this.router.navigate(['/presention'])
   }
+  navigateToColumbus(){
+    window.location.href="http://platform.ansyn.io:81/#/";
+  }
+  navigateToShortVideo(){
+    window.location.href="https://www.youtube.com/watch?v=HHtslr3nAYc";
+  }
+
 }
