@@ -1,7 +1,9 @@
 <header>
   <div class="wrapper">
-    <h1>קולומבוס</h1>
-    <span class="message">הפנים של העולם החזותי, לכל אחד ומכל מקום</span>
+    <div class="headerLogo">
+      קולומבוס
+    </div>
+    <span class="message">הפנים של העולם החזותי, לכל אחד ומכל מקום.</span>
     <button mat-flat-button color="primary" class="link" (click)="navigateToColumbus()">
         עבור לקולמבוס
     </button>
@@ -16,12 +18,12 @@
     <section class="col-sm-12 content">
         <div class="title">
           <span class="text">
-            חומרי הדרכה עצמית
+              חומרי הדרכה עצמית
           </span>
         </div>
-        <hr>
+        <hr class="sepLine">
         <div class="buttons-aria">
-          <button mat-raised-button (click)="navigateToShortVideo()">
+          <button mat-raised-button>
             <mat-icon>
               play_circle_outline
             </mat-icon>
@@ -31,6 +33,7 @@
               <br>
               (2:30 דקות)
             </span>
+
           </button>
 
           <button mat-raised-button>
@@ -60,21 +63,21 @@
 
         <div class="title">
           <span class="text">
-            תמיכה
+              תמיכה
           </span>
         </div>
-        <hr>
+        <hr class="sepLine">
         <div class="buttons-aria">
 
         <button mat-raised-button>
           <mat-icon>
-            build
+            miscellaneous_services
           </mat-icon>
           <span>
             <br>
-            פתרון תקלות נפוצות
+             פתרון תקלות נפוצות
             <br>
-            (מדריך)
+
           </span>
         </button>
         </div>
@@ -89,7 +92,7 @@
       <mat-icon>
         call
       </mat-icon>
-        360-4646
+      360-4646
     </span>
   </div>
 

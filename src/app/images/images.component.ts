@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, RouterStateSnapshot } from '@angular/router';
+import { Router } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-images',
@@ -7,12 +8,14 @@ import { Router, RouterStateSnapshot } from '@angular/router';
   styleUrls: ['./images.component.less']
 })
 export class ImagesComponent implements OnInit {
-  constructor(private router:Router){
+  constructor(private router:Router,private http:HttpClient){
 
   }
 
-  images: any[] = ["../../assets/pics/1.jpg","../../assets/pics/2.jpg","../../assets/pics/3.jpg"];
-  currentImage: number = 0;
+   images: any = [];
+   imagespath: any = [];
+
+   currentImage: number = 0;
 
   previousImage() {
     if (this.currentImage > 0) {
@@ -33,23 +36,11 @@ export class ImagesComponent implements OnInit {
   }
 
   isLastPicture() {
-    if (this.currentImage === this.images.length - 1)
-    {
-      return true;
-    }
-    else {
-      return false;
-    }
+    return (this.currentImage === this.images.length - 1);
   }
 
   isFirstPicture() {
-    if (this.currentImage === 0)
-    {
-      return true;
-    }
-    else {
-      return false;
-    }
+    return (this.currentImage === 0);
   }
 
   navHome()
@@ -60,7 +51,18 @@ export class ImagesComponent implements OnInit {
   {
     window.location.href="http://platform.ansyn.io:81/#/";
   }
+
   ngOnInit(): void {
 
+    this.http.get('http://localhost:3000/pics').toPromise().then(data=>{
+      this.images = data
+      this.images.filter(element => {
+        element='../../assets/pics/presentaion/' + element
+        this.imagespath.push(element)
+      });
+    });
+
   }
+
+
 }

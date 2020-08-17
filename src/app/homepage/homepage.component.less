@@ -1,17 +1,17 @@
 header{
-  background-color: #333;
+  background-color: #262525;
   color: #ddd;
   padding: 20px;
   text-align: center;
   direction: rtl;
   display: flex;
   h1,.message{
-    font-size: 3vw;
+    font-size: 2.5vw;
   }
 }
 
 footer{
-  background-color: #333;
+  background-color: #262525;
   color: #ddd;
   padding: 20px;
   text-align: center;
@@ -29,12 +29,14 @@ footer{
 
 .link{
   background-color: #0091ff;
-  border-radius: 50px;
   font-size: 2vw;
   margin-right: 10vw;
-  margin-top: 5vh;
+  margin-top: 2vh;
   max-height: 10vh;
   width: 18vw;
+  height: 8vh;
+  border-radius: 46px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
 }
 
 
@@ -48,17 +50,35 @@ footer{
     top: 0;
     left: 0;
     z-index: -1;
-    background-image:url('../../assets/pics/גלובוס.jpg');
+    background-image:url('../../assets/pics/group-11.png');
     background-size: 100% auto;
     background-size: cover;
-    opacity: 0.7;
     height: -webkit-fill-available;
     width: -webkit-fill-available;
 }
 
+.headerLogo{
+  font-family: Assistant;
+  font-size: 3.5vw;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.87px;
+  color: #ffffff;
+  margin-right: 6vw;
+}
 .message{
-  margin-top: 4.5vh;
-  margin-right: 2vw;
+  margin-top: 2vh;
+  margin-right: 3vw;
+  font-family: Assistant;
+  font-size: 2.5vw;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.46px;
+  color: #f8f8f8;
 }
 
 .title{
@@ -67,26 +87,41 @@ footer{
   text-align: center;
   direction: rtl;
   display: flex;
+
 }
 
 .text{
+  font-family: Assistant;
+  font-size: 2vw;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.44px;
+  text-align: center;
   color: #000000;
+
 }
 
 .content{
-  padding-left: 40px;
-  padding-right: 40px;
-  padding-top: 10px;
+  margin-right: 5vw;
 }
 
+.sepLine{
+  width: 90%;
+  margin-left: 8vw;
+}
 .buttons-aria{
   direction: rtl;
-  margin-bottom: 20px;
+  margin-top: 5vh;
+  margin-right: 5vw;
   button{
     font-size: 1.5vw;
     height: 35%;
     width: 22%;
-    margin-left: 10vw;
+    margin-left: 4vw;
+    min-height: 25vh;
+
     mat-icon{
       font-size: 3vw;
       margin-bottom: 10%;
@@ -101,6 +136,13 @@ footer{
 
 .help{
   margin-left: 2vw;
+  font-family: Assistant;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.44px;
+  color: #ffffff;
 }
 
 .footstep{
@@ -110,3 +152,7 @@ footer{
   }
 }
 
+@font-face{
+  font-family: 'Assistant';
+  src: url('../../assets/font/Assistant-Regular.ttf');
+}

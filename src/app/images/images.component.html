@@ -16,7 +16,7 @@
   </p>
 </div>
 
-<img id="presentation" src={{images[currentImage]}}>
+<img id="presentation" src={{imagespath[currentImage]}}>
 <div *ngIf="!isLastPicture()" class="left" (click)="nextImage()">
     <img src="../../assets/pics/back.png">
 </div>
@@ -29,5 +29,5 @@
 </div>
 
 <div class="carousel-indicators">
-    <span [class.active]="i===currentImage" *ngFor="let image of images; let i=index;" (click)="currentImage = i"></span>
+    <span [class.active]="i===currentImage" *ngFor="let image of imagespath; let i=index;" (click)="currentImage = i"></span>
 </div>

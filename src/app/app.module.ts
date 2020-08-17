@@ -6,7 +6,8 @@ import { AppComponent } from './app.component';
 import { ImagesComponent } from './images/images.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatButtonModule,MatIconModule } from'@angular/material'
+import { MatButtonModule,MatIconModule } from'@angular/material';
+import { HttpClientModule } from '@angular/common/http';
 
 
 const appRoutes:Routes=[
@@ -26,6 +27,7 @@ const appRoutes:Routes=[
     BrowserAnimationsModule,
     MatButtonModule,
     MatIconModule,
+    HttpClientModule,
     RouterModule.forRoot(appRoutes),
   ],
   providers: [],

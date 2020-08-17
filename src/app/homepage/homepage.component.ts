@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, RouterStateSnapshot } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-homepage',
